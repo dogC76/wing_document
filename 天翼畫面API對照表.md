@@ -18,7 +18,8 @@ app_user_attendance/add_gps_track `android` **會一直去呼叫**
 ![登入][1]
 
  <img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E7%99%BB%E5%85%A5-01.png" width = "300" height = "500" alt="圖片" align=left /></br>
-
+ 
+---
 
 system_config/get_version `android`
 
