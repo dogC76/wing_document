@@ -15,7 +15,7 @@
 ---
 #  登入畫面
 
- <img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E7%99%BB%E5%85%A5-01.png" width = "300" height = "500" alt="圖片" align=center />
+ <img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E7%99%BB%E5%85%A5-02.png" width = "300" height = "500" alt="圖片" align=center />
  
 
 
@@ -520,6 +520,7 @@
 ###  聯絡skywind
 
 `SC035` system_config/get_config
+
 
 
   [1]: https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E7%99%BB%E5%85%A5-01.png
