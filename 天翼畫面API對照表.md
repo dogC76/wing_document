@@ -25,28 +25,20 @@
 
 `SR061` schedule/get_alert_by_number
 
->以下API整併至 AG035
-
-> `AG015` app_group/get_groups_by_enterprise  `ios`
-
-> `AG010` app_group/get_users_by_enterprise_group `android`
-
-> `AG032` app_group/get_allgroups_by_enterprise `android`
+>以下API整併至 AG035  
+`AG015` app_group/get_groups_by_enterprise  `ios`  
+`AG010` app_group/get_users_by_enterprise_group `android`  
+`AG032` app_group/get_allgroups_by_enterprise `android`  
 
 
->以下API整併至 AU001
+>以下API整併至 AU001  
+`PS001` push/save_device_token
 
->`PS001` push/save_device_token
-
->以下API整併至 AU001 / AU052
-
-> `AU051` app_user/get_groups **(怪 android會call兩次)**
-
-> `AU094` app_user_notify/get_count_by_user  
-
-> `AG031` app_group/get_managers_by_user
-
-> `AG017` app_group/get_group_item
+> 以下API整併至 AU001 / AU052  
+> `AU051` app_user/get_groups **(怪 android會call兩次)**  
+> `AU094` app_user_notify/get_count_by_user   
+> `AG031` app_group/get_managers_by_user  
+> `AG017` app_group/get_group_item  
 
 
 ##  忘記密碼
