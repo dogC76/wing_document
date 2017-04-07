@@ -26,6 +26,7 @@
 `SR061` schedule/get_alert_by_number
 
 >以下API整併至 AG035
+
 > `AG015` app_group/get_groups_by_enterprise  `ios`
 
 > `AG010` app_group/get_users_by_enterprise_group `android`
@@ -34,9 +35,11 @@
 
 
 >以下API整併至 AU001
+
 >`PS001` push/save_device_token
 
 >以下API整併至 AU001 / AU052
+
 > `AU051` app_user/get_groups **(怪 android會call兩次)**
 
 > `AU094` app_user_notify/get_count_by_user  
@@ -82,8 +85,9 @@
 `AU094` app_user_notify/get_count_by_user
 
 >以下API整併至 AU001 / AU052
+>
 >`AG017` app_group/get_group_item 
-
+>
 >`AU051` app_user/get_groups `android`
 
 #  首頁_報表
@@ -125,13 +129,13 @@
 `AU066` app_user_attendance/get_attendance_flow_by_manager `ios`
 
 >以下API整併至 AG035
-
+>
 >`AG015` app_group/get_groups_by_enterprise  `ios`
-
+>
 >`AG010` app_group/get_users_by_enterprise_group
 
 >以下API整併至 AU001 / AU052
-
+>
 >`AG009` app_group/get_users_by_main_group `android` (會call多次)  
 
 ###  群組任務_篩選 選擇成員
@@ -238,7 +242,7 @@
 >以下API整併至 AG035
 
 >`AG015` app_group/get_groups_by_enterprise
-
+>
 >`AG010` app_group/get_users_by_enterprise_group 會call多次
 
 ###  聯絡人詳細資訊
@@ -270,7 +274,7 @@
 >以下API整併至 AG035
 
 >`AG015` app_group/get_groups_by_enterprise `ios`
-
+>
 >`AG010` app_group/get_users_by_enterprise_group
 
 **ios此地方call了13次api**
@@ -339,7 +343,7 @@
 <img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E7%BE%A4%E7%B5%84%E5%88%97%E8%A1%A8.png" width = "300" height = "500" alt="群組列表" align=center />  
 
 >以下API整併至 AG035
-
+>
 >`AG015` app_group/get_groups_by_enterprise
 
 ###  創建群組
@@ -366,7 +370,7 @@
 `AG014` app_group/get_subgroups
 
 >以下API整併至 AU001 / AU052
-
+>  
 >`AG031` app_group/get_managers_by_user `ios`
 
 ###  新增成員至群首
@@ -430,7 +434,7 @@
 `AG012` app_group/update_subgroup
 
 >以下API整併至 AU001 / AU052
-
+>   
 >`AG017` app_group/get_group_item `ios`
 
 ###  點擊子群組
@@ -594,8 +598,9 @@
 
 `AU067` app_user_attendance/get_log_by_month_with_user
 
-以下API整併至 AG035 
-`SC001` system_config/get_groups_by_user `android`
+>以下API整併至 AG035 
+>
+>`SC001` system_config/get_groups_by_user `android`
 
 ###  簽到
 <img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E7%B0%BD%E5%88%B0.png" width = "300" height = "500" alt="簽到" align=center />  
@@ -625,12 +630,13 @@
 `AU066` app_user_attendance/get_attendance_flow_by_manager
 
 >以下API整併至 AG035
-`AG010` app_group/get_users_by_enterprise_group `android`
+>
+>`AG010` app_group/get_users_by_enterprise_group `android`
 
 >以下API整併至 AU001 / AU052
-
+>
 >`AG009` app_group/get_users_by_main_group `android`  call多次api
-
+>
 >`AG007` app_group/get_managers_by_group_id `android`
 
 ###  選擇成員
@@ -657,13 +663,13 @@
 `AG032` app_group/get_allgroups_by_enterprise `android` 
 
 >以下API整併至 AG035
-
+>
 >`AG010` app_group/get_users_by_enterprise_group `android`
 
 >以下API整併至 AU001 / AU052
-
+>
 >`AU051` app_user/get_groups `android`
-
+>
 >`AG031` app_group/get_managers_by_user `android`
 
 ###  個人QR code
