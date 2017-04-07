@@ -21,6 +21,7 @@
 
 `SC031` system_config/get_version `android`
 
+
 ---
 
 ##  登入
@@ -28,29 +29,21 @@
  <img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E7%99%BB%E5%85%A5.png" width = "300" height = "500" alt="登入" align=center />    
 
 `AU001` app_user/login
-
-`AU051` app_user/get_groups **怪 android會call兩次**
-
-`AU094` app_user_notify/get_count_by_user  
-
-
-`PS001` push/save_device_token  
-
-
-`AG031` app_group/get_managers_by_user
-
-`AG017` app_group/get_group_item
-
-`AG010` app_group/get_users_by_enterprise_group `android`
-
-`AG032` app_group/get_allgroups_by_enterprise `android`
-
-`AG015` app_group/get_groups_by_enterprise  `ios`  
-
-
 `SR003` schedule/get_targets_by_enterprise `ios`
-
 `SR061` schedule/get_alert_by_number
+
+>以下API整併至 AU001
+>`PS001` push/save_device_token
+
+>以下API整併至 AU001 / AU052
+`AU051` app_user/get_groups **(怪 android會call兩次)**
+`AU094` app_user_notify/get_count_by_user  
+`PS001` push/save_device_token  
+`AG031` app_group/get_managers_by_user
+`AG017` app_group/get_group_item
+`AG010` app_group/get_users_by_enterprise_group `android`
+`AG032` app_group/get_allgroups_by_enterprise `android`
+`AG015` app_group/get_groups_by_enterprise  `ios`  
 
 
 ##  忘記密碼
@@ -67,7 +60,6 @@
  
 `AU022` app_user/active_verify_sms
 
-**驗證碼填寫過要call甚麼api要確認**
 
 ##  忘記密碼-送出
 
@@ -86,12 +78,14 @@
 `SC035` system_config/get_config `android`  
 (call了兩次分別帶tos跟privacy兩個參數)
 
+
 ---
 
 #  首頁
 
  <img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E9%A6%96%E9%A0%81.png" width = "300" height = "500" alt="首頁" align=center />    
  
+>以下API整併至 AU001 / AU052
 `AG017` app_group/get_group_item 
 
 
@@ -133,7 +127,7 @@
 `SR082` schedule_mission/update_report  
 
 
-`SR017` schedule/upload_image 如果有照片
+`SR017` schedule/upload_image **(如果有照片)**
 
 ###  群組任務_篩選
 
@@ -149,11 +143,16 @@
 
 `AU066` app_user_attendance/get_attendance_flow_by_manager `ios`
 
+>以下API整併至 AU001 / AU052
+`AG009` app_group/get_users_by_main_group `android` (會call多次)  
+`AG010` app_group/get_users_by_enterprise_group
+
 ###  群組任務_篩選 選擇成員
 
 <img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E7%BE%A4%E7%B5%84%E4%BB%BB%E5%8B%99_%E9%81%B8%E6%93%87%E6%88%90%E5%93%A1.png" width = "300" height = "500" alt="群組任務_篩選 選擇成員" align=center />  
 
 `SR001` schedule/get_by_days
+
 
 ---
 
@@ -161,12 +160,13 @@
 
 ###  拜訪列表
 
-<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E7%BE%A4%E7%B5%84%E5%88%97%E8%A1%A8.png" width = "300" height = "500" alt="拜訪列表" align=center />  
+<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%8B%9C%E8%A8%AA7%BE%A4%E7%B5%84%E5%88%97%E8%A1%A8.png" width = "300" height = "500" alt="拜訪列表" align=center />  
 
 `SR001` schedule/get_by_days
 
 ###  點擊拜訪進入拜訪詳細資訊
 
+<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%8B%9C%E8%A8%AA%E8%A9%B3%E7%B4%B0%E8%B3%87%E8%A8%8A.png" width = "300" height = "500" alt="點擊拜訪進入拜訪詳細資訊" align=center />  
 
 
 `SR002` schedule/get_item_by_id
@@ -184,10 +184,19 @@
 
 ###  結束拜訪
 
+<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E7%B5%90%E6%9D%9F%E6%8B%9C%E8%A8%AA.png" width = "300" height = "500" alt="結束拜訪" align=center />  
+
+
+
 `SR013` schedule/set_status_done 
 
 ###  暫存
 
+<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%8B%9C%E8%A8%AA_%E6%9A%AB%E5%AD%98.png" width = "300" height = "500" alt="暫存" align=center />  
+
+`SR013` schedule/set_status_done 
+
+###  暫存
 `SR013` schedule/set_status_done `android`
 
 `SR021` schedule/update_feedback
@@ -198,6 +207,8 @@
 
 
 ###  按下記錄此次拜訪
+
+<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%8B%9C%E8%A8%AA_C%89%E4%B8%8B%E8%A8%98%E9%8C%84%E6%AD%A4%E6%9AC%AB1%E5%AD%986%8B%9C%E8%A8%AA.png" width = "300" height = "500" alt="暫存按下記錄此次拜訪" align=center />  
 
 
 `SR021` schedule/update_feedback
@@ -212,6 +223,10 @@
 
 ###  記錄且下次拜訪
 
+<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E5%AE%8C%E6%88%90%E4%B8%94%E4%B8%8B%E6%AC%A1%E6%8B%9C%E8%A8%AA.png" width = "300" height = "500" alt="記錄且下次拜訪" align=center />  
+
+
+
 `SR021` schedule/update_feedback
 
 `SR013` schedule/set_status_done
@@ -223,14 +238,20 @@
 ###  編輯拜訪
 **編輯拜訪未完**
 
+<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E7%B7%A8%E8%BC%AF%E6%8B%9C%E8%A8%AA.png" width = "300" height = "500" alt="記錄且下次編輯拜訪" align=center />  
+
+
 `SR011` schedule/update_item
 
 `SR056` schedule/set_record_id `ios`
 
 **指派人員未完**
 
+<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%8B%9C%E8%A8%AA_%E6%8C%87%E6%B4%BE%E6%88%90%E5%93%A1.png" width = "300" height = "500" alt="指派人員" align=center /> 
+
+
 `ios`
-`AG010` app_group/get_users_by_enterprise_group 會call多次
+ `AG010` app_group/get_users_by_enterprise_group 會call多次
 
 `AG015` app_group/get_groups_by_enterprise
 
@@ -248,8 +269,12 @@
 
 `CT013` contacter/get_company_by_id
 
+
 ---
 ###  新增拜訪
+
+<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%96%B0%E5%A2%9E%E6%8B%9C%E8%A8%AA.png" width = "300" height = "500" alt="新增拜訪" align=center /> 
+
 
 
 `CT003` contacter/get_company_by_user `android`
@@ -258,6 +283,8 @@
 `SR003` schedule/get_targets_by_enterprise `android`
 
 ###  新增拜訪_選擇成員
+
+<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%98B%6C%E8%A8%AA_%E%B8C%87E56AB49B%E6%8B89C0E85A93AA1png" width = "300" height = "500" alt="新增拜訪"_選擇成員 align=center /> 
 
 `AG010` app_group/get_users_by_enterprise_group
 
@@ -274,7 +301,9 @@
 
 ####  新增拜訪_選擇聯絡人 個人客戶
 
-`CT103` contacter/get_company_and_user_list
+`<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%96%B0%E5%A2%9E%E6%8B%9C%E8%A8%AA_%E9%81%B8%E6%93%87%E8%81%AF%E7%B5%A1%E4%BA%BA%20%E4%BC%81%E6%A5%AD%20%E5%80%8B%E4%BA%BA.png" width = "300" height = "500" alt="新增拜訪_選擇聯絡人 個人客戶" align=center /> 
+
+CT103` contacter/get_company_and_user_list
 
 ####  新增拜訪_選擇聯絡人 企業客戶
 ####  選擇公司
@@ -285,19 +314,27 @@
 
 ####  選擇文件
 
-`DF110` document/get_list_by_enterprise
+`<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%8B%9C%E8%A8%AA_%E9%81%B8%E6%93%87%E6%96%87%E4%BB%B6.png" width = "300" height = "500" alt="選擇文件" align=center /> 
+
+DF110` document/get_list_by_enterprise
 
 ###  點選文件
 
-`SR032` schedule/upload_file_enterprise
+`<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%8B%9C%E8%A8%AA_%E9%BB%9E%E9%81%B8%E6%96%87%E4%BB%B6.png" width = "300" height = "500" alt="點選文件" align=center /> 
+
+SR032` schedule/upload_file_enterprise
 
 ###  新增拜訪完送出
+
+
+<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%96%B0%E5%A2%9E%E6%8B%9C%E8%A8%AA%E5%AE%8C%E9%80%81%E5%87%BA.png" width = "300" height = "500" alt="新增拜訪完送出" align=center > 
 
 `SR011` schedule/update_item
 
 `SR056` schedule/set_record_id
 
 `SR001` schedule/get_by_days 重新刷新拜訪頁 **ios會call好幾次api**
+
 
 ---
 
@@ -315,6 +352,7 @@
 
 `AU085` app_user_daily/update_item
 
+
 ---
 
 #  首頁_群組
@@ -326,19 +364,47 @@
 
 `AG015` app_group/get_groups_by_enterprise
 
+###  創建群組
+
+`android`
+`AG011` app_group/update_group
+`AG004` app_group/set_manager
+`AG012` app_group/update_subgroup
+`AG008` app_group/user_join_now
+
+
 ###  點擊群組
 
 <img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E9%BB%9E%E6%93%8A%E7%BE%A4%E7%B5%84.png" width = "300" height = "500" alt="點擊群組" align=center />  
 
 `AG007` app_group/get_managers_by_group_id 
+`AG009` app_group/get_users_by_main_group
 
+>以下API整併至AG007
 `AG014` app_group/get_subgroups
 
+>以下API整併至 AU001 / AU052
 `AG031` app_group/get_managers_by_user `ios`
 
 `AG009` app_group/get_users_by_main_group
 
-###  點擊成員
+###  新增成員至群首
+
+<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%96%B0%E5%A2%9E%E6%88%90%E5%93%A1%E8%87%B3%E7%BE%A4%E9%A6%96.png" width = "300" height = "500" alt="新增成員至群首" align=center />  
+
+
+`G004` app_group/set_manager
+
+
+###  新增成員至群組
+
+<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%96%B0%E5%A2%9E%E6%88%90%E5%93%A1%E8%87%B3%E7%BE%A4%E7%B5%84.png" width = "300" height = "500" alt="新增成員至群組" align=center />  
+
+
+`G008` app_group/user_join_now
+
+
+###  點擊成員_查看成員資訊
 
 <img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E9%BB%9E%E6%93%8A%E6%88%90%E5%93%A1.png" width = "300" height = "500" alt="點擊成員" align=center />  
 
@@ -358,6 +424,9 @@
 
 `AU045` app_user/send_invite_sms
 
+>此流程應該會Call到以下 API ...
+`AG008` : app_group/user_join_now
+
 ###  編輯成員
 
 <img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E7%B7%A8%E8%BC%AF%E6%88%90%E5%93%A1.png" width = "300" height = "500" alt="編輯成員" align=center />  
@@ -376,15 +445,17 @@
 
 `AG012` app_group/update_subgroup
 
+>以下API整併至 AU001 / AU052
 `AG017` app_group/get_group_item `ios`
 
 ###  點擊子群組
 
 <img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E9%BB%9E%E6%93%8A%E5%AD%90%E7%BE%A4%E7%B5%84.png" width = "300" height = "500" alt="點擊子群組" align=center />  
 
-`G006` app_group/get_users
+`AG006` app_group/get_users
 
-`G007` app_group/get_managers_by_group_id
+`AG007` app_group/get_managers_by_group_id
+
 
 ---
 
@@ -436,6 +507,7 @@
 
 `AU093` app_user_notify/set_status_hide
 
+
 ---
 
 #  日曆
@@ -459,6 +531,7 @@
 
 `SR011` schedule/update_item
 
+
 ---
 
 #  聯繫
@@ -471,6 +544,7 @@
 ###  搜尋聯絡人
 
 `CT103` contacter/get_company_and_user_list
+
 **ios搜尋時沒搜尋內容也會call**
 
 `CT103` contacter/get_company_and_user_list `android`
@@ -497,8 +571,8 @@
 
 `CT021` contacter/update_company
 
-`CT024` contacter/delete_person ios沒刪除聯絡人也會call
-
+`CT024` contacter/delete_person **(ios沒刪除聯絡人也會call
+)**
 `CT023` contacter/update_person
 
 `CT005` contacter/get_company_by_name_batch `android`
@@ -515,12 +589,14 @@
 
 `CT023` contacter/update_person
 
+
 ---
 
 #  考勤
 
 <img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E8%80%83%E5%8B%A4.png" width = "300" height = "500" alt="考勤" align=center />  
 
+>以下API整併至 AU001 / AU052
 `AU066` app_user_attendance/get_attendance_flow_by_manager
 
 `AU067` app_user_attendance/get_log_by_month_with_user
@@ -531,6 +607,8 @@
 ###  簽到
 
 <img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E7%B0%BD%E5%88%B0.png" width = "300" height = "500" alt="簽到" align=center />  
+
+`AU063` app_user_attendance/add_attendance
 
 ###  簽退
 
@@ -544,7 +622,7 @@
 
 <img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%88%91%E7%9A%84%E7%B4%80%E9%8C%84.png" width = "300" height = "500" alt="我的記錄" align=center />  
 
-`AU067` app_user_attendance/get_log_by_month_with_user ios會call三次
+`AU067` app_user_attendance/get_log_by_month_with_user **(ios會call三次)**
 
 ###  考勤詳細記錄
 
@@ -556,6 +634,7 @@
 
 <img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E7%BE%A4%E7%B5%84%E8%80%83%E5%8B%A4.png" width = "300" height = "500" alt="群組考勤" align=center />  
 
+>以下API整併至 AU001 / AU052
 `AU066` app_user_attendance/get_attendance_flow_by_manager
 
 
@@ -570,6 +649,7 @@
 <img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E7%BE%A4%E9%A7%94%E8%80%83%E5%8B%A4_%E9%81%B8%E6%93%87%E6%88%90%E5%93%A1.png" width = "300" height = "500" alt="群組考勤_選擇成員" align=center />  
 
 `AU067` app_user_attendance/get_log_by_month_with_user
+
 
 ---
 
@@ -586,12 +666,14 @@
 
 `DF111` document/search_by_enterprise `android`
 
+
 ---
 
 #  設定
 
 <img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E8%A8%AD%E5%AE%9A.png" width = "300" height = "500" alt="設定" align=center />  
 
+>以下API整併至 AU001 / AU052
 `AU051` app_user/get_groups `android`
 
 
