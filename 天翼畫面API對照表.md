@@ -38,12 +38,11 @@
 >以下API整併至 AU001 / AU052
 `AU051` app_user/get_groups **(怪 android會call兩次)**
 `AU094` app_user_notify/get_count_by_user  
-`PS001` push/save_device_token  
 `AG031` app_group/get_managers_by_user
 `AG017` app_group/get_group_item
 `AG010` app_group/get_users_by_enterprise_group `android`
 `AG032` app_group/get_allgroups_by_enterprise `android`
-`AG015` app_group/get_groups_by_enterprise  `ios`  
+`AG015` app_group/get_groups_by_enterprise  `ios`
 
 
 ##  忘記密碼
@@ -282,9 +281,11 @@
 
 `SR003` schedule/get_targets_by_enterprise `android`
 
-###  新增拜訪_選擇成員
+###  新增拜訪_選擇成員   
+
 
 <img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%98B%6C%E8%A8%AA_%E%B8C%87E56AB49B%E6%8B89C0E85A93AA1png" width = "300" height = "500" alt="新增拜訪"_選擇成員 align=center /> 
+
 
 `AG010` app_group/get_users_by_enterprise_group
 
@@ -301,9 +302,9 @@
 
 ####  新增拜訪_選擇聯絡人 個人客戶
 
-`<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%96%B0%E5%A2%9E%E6%8B%9C%E8%A8%AA_%E9%81%B8%E6%93%87%E8%81%AF%E7%B5%A1%E4%BA%BA%20%E4%BC%81%E6%A5%AD%20%E5%80%8B%E4%BA%BA.png" width = "300" height = "500" alt="新增拜訪_選擇聯絡人 個人客戶" align=center /> 
+<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%96%B0%E5%A2%9E%E6%8B%9C%E8%A8%AA_%E9%81%B8%E6%93%87%E8%81%AF%E7%B5%A1%E4%BA%BA%20%E4%BC%81%E6%A5%AD%20%E5%80%8B%E4%BA%BA.png" width = "300" height = "500" alt="新增拜訪_選擇聯絡人 個人客戶" align=center /> 
 
-CT103` contacter/get_company_and_user_list
+`CT103` contacter/get_company_and_user_list
 
 ####  新增拜訪_選擇聯絡人 企業客戶
 ####  選擇公司
@@ -314,15 +315,15 @@ CT103` contacter/get_company_and_user_list
 
 ####  選擇文件
 
-`<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%8B%9C%E8%A8%AA_%E9%81%B8%E6%93%87%E6%96%87%E4%BB%B6.png" width = "300" height = "500" alt="選擇文件" align=center /> 
+<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%8B%9C%E8%A8%AA_%E9%81%B8%E6%93%87%E6%96%87%E4%BB%B6.png" width = "300" height = "500" alt="選擇文件" align=center /> 
 
-DF110` document/get_list_by_enterprise
+`DF110` document/get_list_by_enterprise
 
 ###  點選文件
 
-`<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%8B%9C%E8%A8%AA_%E9%BB%9E%E9%81%B8%E6%96%87%E4%BB%B6.png" width = "300" height = "500" alt="點選文件" align=center /> 
+<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%8B%9C%E8%A8%AA_%E9%BB%9E%E9%81%B8%E6%96%87%E4%BB%B6.png" width = "300" height = "500" alt="點選文件" align=center /> 
 
-SR032` schedule/upload_file_enterprise
+`SR032` schedule/upload_file_enterprise
 
 ###  新增拜訪完送出
 
