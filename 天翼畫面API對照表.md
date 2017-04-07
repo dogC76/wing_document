@@ -332,14 +332,14 @@
 
 <img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%96%B0%E5%A2%9E%E6%88%90%E5%93%A1%E8%87%B3%E7%BE%A4%E9%A6%96.png" width = "300" height = "500" alt="新增成員至群首" align=center />  
 
-`G004` app_group/set_manager
+`AG004` app_group/set_manager
 
 ###  新增成員至群組
 
 
 <img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%96%B0%E5%A2%9E%E6%88%90%E5%93%A1%E8%87%B3%E7%BE%A4%E7%B5%84.png" width = "300" height = "500" alt="新增成員至群組" align=center />  
 
-`G008` app_group/user_join_now
+`AG008` app_group/user_join_now
 
 ###  點擊成員_查看成員資訊
 
@@ -353,6 +353,7 @@
 
 <img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%96%B0%E5%A2%9E%E6%88%90%E5%93%A1.png" width = "300" height = "500" alt="新增成員" align=center />  
 
+
 `AG016` app_group/get_package_by_enterprise
 
 ###  新增成員_確認
@@ -360,11 +361,11 @@
 
 <img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%96%B0%E5%A2%9E%E6%88%90%E5%93%A1_%E7%A2%BA%E8%AA%8D.png" width = "300" height = "500" alt="新增成員_確認" align=center />  
 
+
+
 `AU044` app_user/get_users_by_cellphone_batch  
 `AU045` app_user/send_invite_sms  
 
->此流程應會Call到以下 API ...
-`AG008` : app_group/user_join_now
 
 ###  編輯成員
 
