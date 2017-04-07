@@ -29,10 +29,10 @@
 
 `AU051` app_user/get_groups **怪 android會call兩次**
 
-`AU094` app_user_notify/get_count_by_user
+`AU094` app_user_notify/get_count_by_user  
 
 
-`PS001` push/save_device_token
+`PS001` push/save_device_token  
 
 
 `AG031` app_group/get_managers_by_user
@@ -43,7 +43,7 @@
 
 `AG032` app_group/get_allgroups_by_enterprise `android`
 
-`AG015` app_group/get_groups_by_enterprise  `ios`
+`AG015` app_group/get_groups_by_enterprise  `ios`  
 
 
 `SR003` schedule/get_targets_by_enterprise `ios`
@@ -73,7 +73,8 @@
 `AU011` app_user/cellphone_signup 
 
 
-`SC035` system_config/get_config `android` **call了兩次分別帶tos跟privacy兩個參數**
+`SC035` system_config/get_config `android`  
+(call了兩次分別帶tos跟privacy兩個參數)
 
 ---
 
@@ -96,31 +97,41 @@
 
 `SR001` schedule/get_by_days  **ios每點一天會call一次API，android只會call一次**
 
+###  新增任務
+
+**檢查android**
+`SR011` schedule/update_item
+
 ###  點擊任務進入任務詳細資訊
 
 `SR002` schedule/get_item_by_id
 
 ###  匯報任務
 
-`android`
-`SR082` schedule_mission/update_report
+
+`SR082` schedule_mission/update_report  
 
 
 `SR017` schedule/upload_image 如果有照片
 
 ###  群組任務_篩選
 
-`android`
-`AG009` app_group/get_users_by_main_group 會call多次
+
+`AG009` app_group/get_users_by_main_group `android` (會call多次)  
 
 `AG010` app_group/get_users_by_enterprise_group
 
 `AG007` app_group/get_managers_by_group_id
 
+`AG015` app_group/get_groups_by_enterprise  `ios`
+
+`AU066` app_user_attendance/get_attendance_flow_by_manager `ios`
+
 ###  群組任務_篩選 選擇成員
 
-`android`
 `SR001` schedule/get_by_days
+
+---
 
 #  首頁_拜訪
 
@@ -204,7 +215,7 @@
 
 ###  聯絡人詳細資訊
 
-`android`
+
 `CT012` contacter/get_person_by_company_id
 
 `CT013` contacter/get_company_by_id
