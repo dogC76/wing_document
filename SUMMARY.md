@@ -27,7 +27,7 @@
   * [聯絡人詳細資訊](lian-luo-ren-xiang-xi-zi-xun.md)
   * [新增拜訪](xin-zeng-bai-fang.md)
     * [新增拜訪\_選擇成員](xin-zeng-bai-fang-xuan-ze-cheng-yuan.md)
-    * 新增拜訪\_選擇聯絡人 企業客戶
+    * [新增拜訪\_選擇聯絡人 企業客戶](xin-zeng-bai-fang-xuan-ze-lian-luo-ren-qi-ye-ke-hu.md)
     * [新增拜訪\_選擇聯絡人 個人客戶](xin-zeng-bai-fang-xuan-ze-lian-luo-ren-ge-ren-ke-hu.md)
     * [選擇公司](xuan-ze-gong-si.md)
     * [選擇文件](xuan-ze-wen-jian.md)
@@ -36,7 +36,7 @@
 * [日報](ri-bao.md)
   * [日報列表](ri-bao-lie-biao.md)
   * [新增/編輯日報](xin-589e-bian-ji-ri-bao.md)
-* 群組
+* [群組](qun-zu.md)
   * [群組列表](qun-zu-lie-biao.md)
   * [創建群組](chuang-jian-qun-zu.md)
   * [點擊群組](dian-ji-qun-zu.md)

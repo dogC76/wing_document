@@ -1,6 +1,6 @@
 ## 登入
 
-&lt;img src="[https://github.com/dogC76/wing\_document/blob/master/圖/登入.png](https://github.com/dogC76/wing_document/blob/master/圖/登入.png)" width = "300" height = "500" alt="登入" align=center /&gt;
+
 
 ![](/圖/首頁.png)
 
@@ -21,9 +21,7 @@
 > 以下API整併至 AU001
 >
 > `PS001` push/save\_device\_token
-
-
-
+>
 > 以下API整併至 AU001 / AU052
 >
 > `AU051` app\_user/get\_groups **\(怪 android會call兩次\)**
