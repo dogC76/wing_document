@@ -32,4 +32,8 @@
     * [選擇公司](xuan-ze-gong-si.md)
     * [選擇文件](xuan-ze-wen-jian.md)
     * [點選文件](dian-xuan-wen-jian.md)
+    * [新增拜訪完送出](xin-zeng-bai-fang-wan-song-chu.md)
+* 日報
+  * [日報列表](ri-bao-lie-biao.md)
+  * [新增/編輯日報](xin-589e-bian-ji-ri-bao.md)
 
