@@ -28,4 +28,8 @@
   * [新增拜訪](xin-zeng-bai-fang.md)
     * [新增拜訪\_選擇成員](xin-zeng-bai-fang-xuan-ze-cheng-yuan.md)
     * 新增拜訪\_選擇聯絡人 企業客戶
+    * [新增拜訪\_選擇聯絡人 個人客戶](xin-zeng-bai-fang-xuan-ze-lian-luo-ren-ge-ren-ke-hu.md)
+    * [選擇公司](xuan-ze-gong-si.md)
+    * [選擇文件](xuan-ze-wen-jian.md)
+    * [點選文件](dian-xuan-wen-jian.md)
 
