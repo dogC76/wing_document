@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>天翼畫面API對照表</title>
+</head>
+<body>
+<div id="wmd-preview" class="wmd-preview"><div class="md-section-divider"></div><div class="md-section-divider"></div><h1 data-anchor-id="hhr1" id="天翼畫面api對照表">天翼畫面API對照表</h1><hr><div class="md-section-divider"></div><h1 data-anchor-id="2v8q" id="背景呼叫">背景呼叫</h1><p data-anchor-id="sl64"><code>AU074</code> app_user_attendance/add_gps_track <strong>會一直去呼叫</strong></p><p data-anchor-id="gn5u"><code>SC031</code> system_config/get_version <strong>一直去呼叫</strong></p><hr><div class="md-section-divider"></div><h1 data-anchor-id="nkkm" id="登入畫面">登入畫面</h1><p data-anchor-id="7hb7">    </p><p data-anchor-id="e60x"><code>SC031</code> system_config/get_version <code>android</code></p><hr><div class="md-section-divider"></div><h2 data-anchor-id="uo6v" id="登入">登入</h2><p data-anchor-id="os5v">    </p><p data-anchor-id="3rly"><code>AU001</code> app_user/login</p><p data-anchor-id="itej"><code>SR003</code> schedule/get_targets_by_enterprise <code>ios</code></p><p data-anchor-id="ekdr"><code>SR061</code> schedule/get_alert_by_number</p><blockquote data-anchor-id="gi4s" class="white-blockquote">
+  <p>以下API整併至 AG035 <br>
+  <code>AG015</code> app_group/get_groups_by_enterprise  <code>ios</code> <br>
+  <code>AG010</code> app_group/get_users_by_enterprise_group <code>android</code> <br>
+  <code>AG032</code> app_group/get_allgroups_by_enterprise <code>android</code>  </p>
+  
+  <p>以下API整併至 AU001 <br>
+  <code>PS001</code> push/save_device_token</p>
+  
+  <p>以下API整併至 AU001 / AU052 <br>
+  <code>AU051</code> app_user/get_groups <strong>(怪 android會call兩次)</strong> <br>
+  <code>AU094</code> app_user_notify/get_count_by_user <br>
+  <code>AG031</code> app_group/get_managers_by_user <br>
+  <code>AG017</code> app_group/get_group_item  </p>
+</blockquote><div class="md-section-divider"></div><h2 data-anchor-id="vrdp" id="忘記密碼">忘記密碼</h2><p data-anchor-id="ww3u">    </p><p data-anchor-id="k01g"><code>AU012</code> app_user/cellphone_check <br>
+<code>AU021</code> app_user/active_send_sms</p><div class="md-section-divider"></div><h2 data-anchor-id="iasz" id="填寫驗證碼">填寫驗證碼</h2><p data-anchor-id="pyha">    </p><p data-anchor-id="dfpu"><code>AU022</code> app_user/active_verify_sms</p><div class="md-section-divider"></div><h2 data-anchor-id="gkof" id="忘記密碼-送出">忘記密碼-送出</h2><p data-anchor-id="0x56">    </p><p data-anchor-id="b86s"><code>AU041</code> app_user/update_secret</p><div class="md-section-divider"></div><h2 data-anchor-id="8v6f" id="新用戶註冊">新用戶註冊</h2><p data-anchor-id="a2yi">    </p><p data-anchor-id="otdw"><code>AU011</code> app_user/cellphone_signup   </p><p data-anchor-id="lk8q"><code>SC035</code> system_config/get_config <code>android</code> <br>
+(call了兩次分別帶tos跟privacy兩個參數)</p><hr><div class="md-section-divider"></div><h1 data-anchor-id="27hj" id="首頁">首頁</h1><p data-anchor-id="s767">    </p><p data-anchor-id="a1x1"><code>AU094</code> app_user_notify/get_count_by_user</p><blockquote data-anchor-id="asdt" class="white-blockquote">
+  <p>以下API整併至 AU001 / AU052 <br>
+  <code>AG017</code> app_group/get_group_item <br>
+  <code>AU051</code> app_user/get_groups <code>android</code>  </p>
+</blockquote><div class="md-section-divider"></div><h1 data-anchor-id="wlfd" id="首頁報表">首頁_報表</h1><p data-anchor-id="32b1">    </p><p data-anchor-id="f7z7"><code>SR101</code> schedule/get_user_type2_report</p><div class="md-section-divider"></div><h1 data-anchor-id="nxj1" id="首頁任務">首頁_任務</h1><p data-anchor-id="ne45">   </p><p data-anchor-id="8ym3"><code>SR001</code> schedule/get_by_days  <strong>ios每點一天會call一次API，android只會call一次</strong></p><div class="md-section-divider"></div><h3 data-anchor-id="cvh9" id="新增任務">新增任務</h3><p data-anchor-id="clc1">    </p><p data-anchor-id="m80w"><strong>檢查android</strong> <br>
+<code>SR011</code> schedule/update_item</p><div class="md-section-divider"></div><h3 data-anchor-id="f1bd" id="點擊任務進入任務詳細資訊">點擊任務進入任務詳細資訊</h3><p data-anchor-id="8suj">  </p><p data-anchor-id="lr7k"><code>SR002</code> schedule/get_item_by_id</p><div class="md-section-divider"></div><h3 data-anchor-id="a4hq" id="匯報任務">匯報任務</h3><p data-anchor-id="u7kg">  </p><p data-anchor-id="mxe8"><code>SR082</code> schedule_mission/update_report  </p><p data-anchor-id="8gra"><code>SR017</code> schedule/upload_image <strong>(如果有照片)</strong></p><div class="md-section-divider"></div><h3 data-anchor-id="ryeb" id="群組任務篩選">群組任務_篩選</h3><p data-anchor-id="stpf">  </p><p data-anchor-id="e9l8"><code>AG009</code> app_group/get_users_by_main_group <code>android</code> (會call多次)  </p><p data-anchor-id="ffoc"><code>AG007</code> app_group/get_managers_by_group_id</p><p data-anchor-id="9vvi"><code>AU066</code> app_user_attendance/get_attendance_flow_by_manager <code>ios</code></p><blockquote data-anchor-id="huje" class="white-blockquote">
+  <p>以下API整併至 AG035 <br>
+  <code>AG015</code> app_group/get_groups_by_enterprise  <code>ios</code> <br>
+  <code>AG010</code> app_group/get_users_by_enterprise_group  </p>
+  
+  <p>以下API整併至 AU001 / AU052 <br>
+  <code>AG009</code> app_group/get_users_by_main_group <code>android</code> (會call多次)  </p>
+</blockquote><div class="md-section-divider"></div><h3 data-anchor-id="5776" id="群組任務篩選-選擇成員">群組任務_篩選 選擇成員</h3><p data-anchor-id="mool">  </p><p data-anchor-id="w7zl"><code>SR001</code> schedule/get_by_days</p><hr><div class="md-section-divider"></div><h1 data-anchor-id="hld9" id="首頁拜訪">首頁_拜訪</h1><div class="md-section-divider"></div><h3 data-anchor-id="tzqy" id="拜訪列表">拜訪列表</h3><p data-anchor-id="gwpy"> </p><p data-anchor-id="of2a"><code>SR001</code> schedule/get_by_days</p><div class="md-section-divider"></div><h3 data-anchor-id="ly2s" id="點擊拜訪進入拜訪詳細資訊">點擊拜訪進入拜訪詳細資訊</h3><p data-anchor-id="g29n">  </p><p data-anchor-id="e7vs"><code>SR002</code> schedule/get_item_by_id <br>
+<code>SR005</code> schedule/get_feedback_by_feedback_id 有回饋資料時 <br>
+<code>SR013</code> schedule/set_status_done <code>ios</code> 按下開始或結束拜訪 <br>
+<code>SR007</code> schedule/get_target_by_enterprise <code>ios</code> 按下開始拜訪  </p><p data-anchor-id="a4dm"><code>CT013</code> contacter/get_company_by_id <code>android</code> 需確認是否選的公司不同 <br>
+<code>CT004</code> contacter/get_company_near_by_gps <code>android</code> 需確認是否選的公司不同  </p><div class="md-section-divider"></div><h3 data-anchor-id="g1oh" id="結束拜訪">結束拜訪</h3><p data-anchor-id="l1ni">  </p><p data-anchor-id="096b"><code>SR013</code> schedule/set_status_done </p><div class="md-section-divider"></div><h3 data-anchor-id="wjuv" id="暫存">暫存</h3><p data-anchor-id="nc0u">  </p><p data-anchor-id="7ymk"><code>SR013</code> schedule/set_status_done <code>android</code> <br>
+<code>SR021</code> schedule/update_feedback <br>
+<code>SR002</code> schedule/get_item_by_id <br>
+<code>SR005</code> schedule/get_feedback_by_feedback_id  </p><div class="md-section-divider"></div><h3 data-anchor-id="za02" id="按下記錄此次拜訪">按下記錄此次拜訪</h3><p data-anchor-id="xaqu">  </p><p data-anchor-id="urvi"><code>SR021</code> schedule/update_feedback <br>
+<code>SR013</code> schedule/set_status_done <br>
+<code>SR022</code> schedule/upload_feedback_image <br>
+<code>SR002</code> schedule/get_item_by_id <br>
+<code>SR005</code> schedule/get_feedback_by_feedback_id   </p><div class="md-section-divider"></div><h3 data-anchor-id="n7c3" id="記錄且下次拜訪">記錄且下次拜訪</h3><p data-anchor-id="520w">  </p><p data-anchor-id="0upw"><code>SR021</code> schedule/update_feedback <br>
+<code>SR013</code> schedule/set_status_done <br>
+<code>SR002</code> schedule/get_item_by_id <code>android</code> <br>
+<code>SR003</code> schedule/get_targets_by_enterprise <code>android</code>  </p><div class="md-section-divider"></div><h3 data-anchor-id="g3w9" id="編輯拜訪">編輯拜訪</h3><p data-anchor-id="im6w"><strong>編輯拜訪未完</strong></p><p data-anchor-id="2v0i">  </p><p data-anchor-id="uhch"><code>SR011</code> schedule/update_item <br>
+<code>SR056</code> schedule/set_record_id <code>ios</code>  </p><p data-anchor-id="y5a4"><strong>指派人員未完</strong></p><p data-anchor-id="7989"> </p><p data-anchor-id="g1nl"><code>ios</code> <br>
+<code>AG007</code> app_group/get_managers_by_group_id 會call多次 <br>
+<code>AG006</code> app_group/get_users 會call多次  </p><p data-anchor-id="95hg"><code>AU066</code> app_user_attendance/get_attendance_flow_by_manager</p><blockquote data-anchor-id="k2lq" class="white-blockquote">
+  <p>以下API整併至 AG035</p>
+  
+  <p><code>AG015</code> app_group/get_groups_by_enterprise <br>
+  <code>AG010</code> app_group/get_users_by_enterprise_group 會call多次  </p>
+</blockquote><div class="md-section-divider"></div><h3 data-anchor-id="i63k" id="聯絡人詳細資訊">聯絡人詳細資訊</h3><p data-anchor-id="qbu9"><code>CT012</code> contacter/get_person_by_company_id <br>
+<code>CT013</code> contacter/get_company_by_id  </p><hr><div class="md-section-divider"></div><h3 data-anchor-id="j943" id="新增拜訪">新增拜訪</h3><p data-anchor-id="fk4r"> </p><p data-anchor-id="6try"><code>CT003</code> contacter/get_company_by_user <code>android</code></p><p data-anchor-id="c6ok"><code>SR003</code> schedule/get_targets_by_enterprise <code>android</code></p><div class="md-section-divider"></div><h3 data-anchor-id="lyi0" id="新增拜訪選擇成員">新增拜訪_選擇成員</h3><p data-anchor-id="ucbb"> </p><p data-anchor-id="m40u"><code>AG009</code> app_group/get_users_by_main_group <code>android</code> 會call多次api <br>
+<code>AG006</code> app_group/get_users <code>ios</code> <br>
+<code>AG007</code> app_group/get_managers_by_group_id  </p><blockquote data-anchor-id="id7b" class="white-blockquote">
+  <p>以下API整併至 AG035 <br>
+  <code>AG015</code> app_group/get_groups_by_enterprise <code>ios</code> <br>
+  <code>AG010</code> app_group/get_users_by_enterprise_group  </p>
+</blockquote><p data-anchor-id="k7id"><strong>ios此地方call了13次api</strong></p><div class="md-section-divider"></div><h4 data-anchor-id="bc1j" id="新增拜訪選擇聯絡人-個人客戶">新增拜訪_選擇聯絡人 個人客戶</h4><p data-anchor-id="891o"> </p><p data-anchor-id="9uue"><code>CT103</code> contacter/get_company_and_user_list</p><div class="md-section-divider"></div><h4 data-anchor-id="sulp" id="新增拜訪選擇聯絡人-企業客戶">新增拜訪_選擇聯絡人 企業客戶</h4><div class="md-section-divider"></div><h4 data-anchor-id="evza" id="選擇公司">選擇公司</h4><p data-anchor-id="o4bs"><code>CT103</code> contacter/get_company_and_user_list 客戶列表 <br>
+<code>CT012</code> contacter/get_person_by_company_id android點擊後才call</p><div class="md-section-divider"></div><h4 data-anchor-id="3jry" id="選擇文件">選擇文件</h4><p data-anchor-id="ll3j">  </p><p data-anchor-id="6lhs"><code>DF110</code> document/get_list_by_enterprise</p><div class="md-section-divider"></div><h3 data-anchor-id="1517" id="點選文件">點選文件</h3><p data-anchor-id="37c1"> </p><p data-anchor-id="t9wp"><code>SR032</code> schedule/upload_file_enterprise</p><div class="md-section-divider"></div><h3 data-anchor-id="nqez" id="新增拜訪完送出">新增拜訪完送出</h3><p data-anchor-id="ye7m"> </p><p data-anchor-id="fvrv"><code>SR011</code> schedule/update_item <br>
+<code>SR056</code> schedule/set_record_id <br>
+<code>SR001</code> schedule/get_by_days 重新刷新拜訪頁 <strong>ios會call好幾次api</strong>  </p><hr><div class="md-section-divider"></div><h1 data-anchor-id="6fbd" id="首頁日報">首頁_日報</h1><div class="md-section-divider"></div><h3 data-anchor-id="lt43" id="日報列表">日報列表</h3><p data-anchor-id="h5sh">  </p><p data-anchor-id="9qem"><code>AU087</code> app_user_daily/get_list 會call多次api</p><div class="md-section-divider"></div><h3 data-anchor-id="pafe" id="新增編輯日報">新增/編輯日報</h3><p data-anchor-id="4ivv">  </p><p data-anchor-id="tipy"><code>AU085</code> app_user_daily/update_item</p><hr><div class="md-section-divider"></div><h1 data-anchor-id="wrus" id="首頁群組">首頁_群組</h1><div class="md-section-divider"></div><h3 data-anchor-id="tnnu" id="群組列表">群組列表</h3><p data-anchor-id="2qgu">  </p><blockquote data-anchor-id="op5b" class="white-blockquote">
+  <p>以下API整併至 AG035 <br>
+  <code>AG015</code> app_group/get_groups_by_enterprise  </p>
+</blockquote><div class="md-section-divider"></div><h3 data-anchor-id="abk0" id="創建群組">創建群組</h3><p data-anchor-id="bble"><code>android</code> <br>
+<code>AG011</code> app_group/update_group <br>
+<code>AG004</code> app_group/set_manager <br>
+<code>AG012</code> app_group/update_subgroup <br>
+<code>AG008</code> app_group/user_join_now  </p><div class="md-section-divider"></div><h3 data-anchor-id="gtx2" id="點擊群組">點擊群組</h3><p data-anchor-id="poeu">  </p><p data-anchor-id="efv1"><code>AG007</code> app_group/get_managers_by_group_id <br>
+<code>AG009</code> app_group/get_users_by_main_group <br>
+<code>AG014</code> app_group/get_subgroups  </p><blockquote data-anchor-id="zjbb" class="white-blockquote">
+  <p>以下API整併至 AU001 / AU052 <br>
+  <code>AG031</code> app_group/get_managers_by_user <code>ios</code>  </p>
+</blockquote><div class="md-section-divider"></div><h3 data-anchor-id="y5za" id="新增成員至群首">新增成員至群首</h3><p data-anchor-id="toz1">  </p><p data-anchor-id="q3up"><code>AG004</code> app_group/set_manager</p><div class="md-section-divider"></div><h3 data-anchor-id="kmgy" id="新增成員至群組">新增成員至群組</h3><p data-anchor-id="qhic">  </p><p data-anchor-id="lxtk"><code>AG008</code> app_group/user_join_now</p><div class="md-section-divider"></div><h3 data-anchor-id="6y47" id="點擊成員查看成員資訊">點擊成員_查看成員資訊</h3><p data-anchor-id="9qky">  </p><p data-anchor-id="vp4n"><code>AU052</code> app_user/get_user <code>ios</code></p><div class="md-section-divider"></div><h3 data-anchor-id="ejxe" id="新增成員">新增成員</h3><p data-anchor-id="77cm">  </p><p data-anchor-id="dom3"><code>AG016</code> app_group/get_package_by_enterprise</p><div class="md-section-divider"></div><h3 data-anchor-id="xukm" id="新增成員確認">新增成員_確認</h3><p data-anchor-id="drrh">  </p><p data-anchor-id="denf"><code>AU044</code> app_user/get_users_by_cellphone_batch <br>
+<code>AU045</code> app_user/send_invite_sms  </p><div class="md-section-divider"></div><h3 data-anchor-id="34hl" id="編輯成員">編輯成員</h3><p data-anchor-id="4c6m">  </p><p data-anchor-id="zzwg"><code>AU052</code> app_user/get_user <code>ios</code></p><div class="md-section-divider"></div><h3 data-anchor-id="ws5v" id="刪除成員">刪除成員</h3><p data-anchor-id="e398">  </p><p data-anchor-id="1saz"><code>AG003</code> app_group/user_remove</p><div class="md-section-divider"></div><h3 data-anchor-id="vmip" id="新建子群組">新建子群組</h3><p data-anchor-id="dcph">  </p><p data-anchor-id="t526"><code>AG012</code> app_group/update_subgroup</p><blockquote data-anchor-id="cx46" class="white-blockquote">
+  <p>以下API整併至 AU001 / AU052 <br>
+  <code>AG017</code> app_group/get_group_item <code>ios</code>  </p>
+</blockquote><div class="md-section-divider"></div><h3 data-anchor-id="jjtw" id="點擊子群組">點擊子群組</h3><p data-anchor-id="j5r1">  </p><p data-anchor-id="cvte"><code>AG006</code> app_group/get_users <br>
+<code>AG007</code> app_group/get_managers_by_group_id</p><hr><div class="md-section-divider"></div><h1 data-anchor-id="711j" id="首頁消息">首頁_消息</h1><div class="md-section-divider"></div><h3 data-anchor-id="hyut" id="消息列表">消息列表</h3><p data-anchor-id="tzzs">  </p><p data-anchor-id="x0ug"><code>U095</code> app_user_notify/get_list_by_user  </p><div class="md-section-divider"></div><h3 data-anchor-id="95dy" id="點擊消息拜訪">點擊消息_拜訪</h3><p data-anchor-id="zuge">  </p><p data-anchor-id="0lse"><code>U096</code> app_user_notify/get_item_by_id   怪 ios任務會call兩次</p><p data-anchor-id="uwsa"><code>AU093</code> app_user_notify/set_status_hide</p><p data-anchor-id="iw2q">以下詳細拜訪資訊 <br>
+<code>SR002</code> schedule/get_item_by_id <br>
+<code>SR005</code> schedule/get_feedback_by_feedback_id</p><p data-anchor-id="52dw"><code>CT013</code> contacter/get_company_by_id <br>
+<code>CT004</code> contacter/get_company_near_by_gps</p><p data-anchor-id="g163">以下為任務 <br>
+<code>SR002</code> schedule/get_item_by_id</p><p data-anchor-id="jzxg"><code>U096</code> app_user_notify/get_item_by_id <br>
+<code>AU093</code> app_user_notify/set_status_hide</p><p data-anchor-id="ute8">以下為公告  </p><p data-anchor-id="b96c"><code>AU093</code> app_user_notify/set_status_hide <br>
+<code>U096</code> app_user_notify/get_item_by_id</p><p data-anchor-id="ci43">以下為考勤  </p><p data-anchor-id="pb9k"><code>U096</code> app_user_notify/get_item_by_id <br>
+<code>AU093</code> app_user_notify/set_status_hide</p><hr><div class="md-section-divider"></div><h1 data-anchor-id="kyd1" id="日曆">日曆</h1><div class="md-section-divider"></div><h3 data-anchor-id="6i1c" id="日曆列表">日曆列表</h3><p data-anchor-id="btb6">  </p><p data-anchor-id="zjy8"><code>SR001</code> schedule/get_by_days ios會call多次</p><div class="md-section-divider"></div><h3 data-anchor-id="m5ul" id="詳細內容">詳細內容</h3><p data-anchor-id="um4u">同拜訪或任務</p><p data-anchor-id="72gd">事項 <br>
+<code>SR002</code> schedule/get_item_by_id</p><div class="md-section-divider"></div><h3 data-anchor-id="c4k9" id="新增行程">新增行程</h3><p data-anchor-id="trbd">  </p><p data-anchor-id="0elj"><code>SR011</code> schedule/update_item</p><hr><div class="md-section-divider"></div><h1 data-anchor-id="lfdn" id="聯繫">聯繫</h1><div class="md-section-divider"></div><h3 data-anchor-id="nvu8" id="聯絡人列表">聯絡人列表</h3><p data-anchor-id="p0hb">  </p><p data-anchor-id="f94i"><code>CT103</code> contacter/get_company_and_user_list</p><div class="md-section-divider"></div><h3 data-anchor-id="qzoa" id="搜尋聯絡人">搜尋聯絡人</h3><p data-anchor-id="3sn0">  </p><p data-anchor-id="xddh"><code>CT103</code> contacter/get_company_and_user_list <br>
+<strong>ios搜尋時沒搜尋內容也會call</strong></p><div class="md-section-divider"></div><h3 data-anchor-id="ff03" id="聯絡人排序">聯絡人排序</h3><p data-anchor-id="kibf">  </p><p data-anchor-id="bpig"><code>CT103</code> contacter/get_company_and_user_list</p><div class="md-section-divider"></div><h3 data-anchor-id="a4x5" id="點擊聯絡人">點擊聯絡人</h3><p data-anchor-id="2xmh">  </p><p data-anchor-id="2pj6"><code>CT013</code> contacter/get_company_by_id <br>
+<code>CT012</code> contacter/get_person_by_company_id  </p><div class="md-section-divider"></div><h3 data-anchor-id="afam" id="聯絡人相關資訊">聯絡人相關資訊</h3><p data-anchor-id="m2p8">  </p><p data-anchor-id="w5zg"><code>CT015</code> contacter/get_research_by_id <code>ios</code></p><div class="md-section-divider"></div><h3 data-anchor-id="9uji" id="聯絡人拜訪歷史紀錄">聯絡人拜訪歷史紀錄</h3><p data-anchor-id="y5oh">  </p><p data-anchor-id="2klf"><code>CT016</code> contacter/get_schedules_by_company_id</p><div class="md-section-divider"></div><h3 data-anchor-id="sw74" id="編輯聯絡人">編輯聯絡人</h3><p data-anchor-id="y0fs">  </p><p data-anchor-id="y6l5"><code>CT021</code> contacter/update_company <br>
+<code>CT024</code> contacter/delete_person <strong>(ios沒刪除聯絡人也會call)</strong> <br>
+<code>CT023</code> contacter/update_person <br>
+<code>CT005</code> contacter/get_company_by_name_batch <code>android</code>  </p><div class="md-section-divider"></div><h3 data-anchor-id="b418" id="新增聯絡人企業">新增聯絡人(企業)</h3><p data-anchor-id="pxyx"><code>CT005</code> contacter/get_company_by_name_batch <br>
+<code>CT021</code> contacter/update_company <br>
+<code>CT023</code> contacter/update_person  </p><div class="md-section-divider"></div><h3 data-anchor-id="9vns" id="新增聯絡人個人">新增聯絡人(個人)</h3><p data-anchor-id="3z34"><code>CT023</code> contacter/update_person</p><hr><div class="md-section-divider"></div><h1 data-anchor-id="eynb" id="考勤">考勤</h1><p data-anchor-id="28ug">  </p><p data-anchor-id="p5j7"><code>AU066</code> app_user_attendance/get_attendance_flow_by_manager <br>
+<code>AU067</code> app_user_attendance/get_log_by_month_with_user  </p><blockquote data-anchor-id="9jua" class="white-blockquote">
+  <p>以下API整併至 AG035 <br>
+  <code>SC001</code> system_config/get_groups_by_user <code>android</code></p>
+</blockquote><div class="md-section-divider"></div><h3 data-anchor-id="or7h" id="簽到">簽到</h3><p data-anchor-id="faxq">  </p><p data-anchor-id="685w"><code>AU063</code> app_user_attendance/add_attendance</p><div class="md-section-divider"></div><h3 data-anchor-id="c6tz" id="簽退">簽退</h3><p data-anchor-id="96iz">  </p><p data-anchor-id="gver"><code>AU063</code> app_user_attendance/add_attendance <code>android</code> <br>
+<code>AU067</code> app_user_attendance/get_log_by_month_with_user</p><div class="md-section-divider"></div><h3 data-anchor-id="3odq" id="我的記錄">我的記錄</h3><p data-anchor-id="c3zi">  </p><p data-anchor-id="fbcb"><code>AU067</code> app_user_attendance/get_log_by_month_with_user <strong>(ios會call三次)</strong>  </p><div class="md-section-divider"></div><h3 data-anchor-id="bkdi" id="考勤詳細記錄">考勤詳細記錄</h3><p data-anchor-id="q1gk">  </p><p data-anchor-id="yvl8"><code>AU062</code> app_user_attendance/get_attendance_by_day <code>android</code>  </p><div class="md-section-divider"></div><h3 data-anchor-id="5mja" id="群組考勤">群組考勤</h3><p data-anchor-id="jt4t">  </p><p data-anchor-id="070g"><code>AU066</code> app_user_attendance/get_attendance_flow_by_manager  </p><blockquote data-anchor-id="ggpz" class="white-blockquote">
+  <p>以下API整併至 AG035 <br>
+  <code>AG010</code> app_group/get_users_by_enterprise_group <code>android</code>  </p>
+  
+  <p>以下API整併至 AU001 / AU052 <br>
+  <code>AG009</code> app_group/get_users_by_main_group <code>android</code>  call多次api <br>
+  <code>AG007</code> app_group/get_managers_by_group_id <code>android</code>  </p>
+</blockquote><div class="md-section-divider"></div><h3 data-anchor-id="n9o5" id="選擇成員">選擇成員</h3><p data-anchor-id="l7hd">  </p><p data-anchor-id="6icb"><code>AU067</code> app_user_attendance/get_log_by_month_with_user</p><hr><div class="md-section-divider"></div><h1 data-anchor-id="xz73" id="文件">文件</h1><p data-anchor-id="bv3c">  </p><p data-anchor-id="yrvq"><code>DF110</code> document/get_list_by_enterprise</p><div class="md-section-divider"></div><h3 data-anchor-id="3esq" id="搜尋文件">搜尋文件</h3><p data-anchor-id="1zaw">  </p><p data-anchor-id="wrg7"><code>DF111</code> document/search_by_enterprise <code>android</code></p><hr><div class="md-section-divider"></div><h1 data-anchor-id="s0ik" id="設定">設定</h1><p data-anchor-id="oqeq">  </p><p data-anchor-id="vqmr"><code>AG032</code> app_group/get_allgroups_by_enterprise <code>android</code> </p><blockquote data-anchor-id="um64" class="white-blockquote">
+  <p>以下API整併至 AG035 <br>
+  <code>AG010</code> app_group/get_users_by_enterprise_group <code>android</code>  </p>
+  
+  <p>以下API整併至 AU001 / AU052 <br>
+  <code>AU051</code> app_user/get_groups <code>android</code> <br>
+  <code>AG031</code> app_group/get_managers_by_user <code>android</code>  </p>
+</blockquote><div class="md-section-divider"></div><h3 data-anchor-id="pmqy" id="個人qr-code">個人QR code</h3><p data-anchor-id="vdgs">  </p><p data-anchor-id="nyub"><code>SC032</code> system_config/gen_qrcode</p><div class="md-section-divider"></div><h3 data-anchor-id="sr4j" id="更改姓名">更改姓名</h3><p data-anchor-id="rc77">  </p><p data-anchor-id="ltzl"><code>AU042</code> app_user/update_name</p><div class="md-section-divider"></div><h3 data-anchor-id="icoz" id="修改密碼">修改密碼</h3><p data-anchor-id="5af5">  </p><p data-anchor-id="udvo"><code>AU041</code> app_user/update_secret</p><div class="md-section-divider"></div><h3 data-anchor-id="8i4l" id="qa">Q&amp;A</h3><p data-anchor-id="t1ie">  </p><p data-anchor-id="lc5a"><code>SC033</code> system_config/get_faq</p><div class="md-section-divider"></div><h3 data-anchor-id="ahef" id="聯絡skywind">聯絡skywind</h3><p data-anchor-id="nx6r">  </p><p data-anchor-id="286t"><code>SC035</code> system_config/get_config</p></div>
+</body>
+</html>
