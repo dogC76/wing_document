@@ -173,7 +173,7 @@
 
 ###  按下記錄此次拜訪
 
-<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%8B%9C%E8%A8%AA_C%89%E4%B8%8B%E8%A8%98%E9%8C%84%E6%AD%A4%E6%9AC%AB1%E5%AD%986%8B%9C%E8%A8%AA.png" width = "300" height = "500" alt="暫存按下記錄此次拜訪" align=center />  
+<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%8C%89%E4%B8%8B%E8%A8%98%E9%8C%84%E6%AD%A4%E6%AC%A1%E6%8B%9C%E8%A8%AA.png" width = "300" height = "500" alt="暫存按下記錄此次拜訪" align=center />  
 
 `SR021` schedule/update_feedback  
 `SR013` schedule/set_status_done  
@@ -230,9 +230,9 @@
 
 `SR003` schedule/get_targets_by_enterprise `android`
 
-###  新增拜訪_選擇成員   
+###  新增拜訪_選擇成員
 
-<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%98B%6C%E8%A8%AA_%E%B8C%87E56AB49B%E6%8B89C0E85A93AA1png" width = "300" height = "500" alt="新增拜訪"_選擇成員 align=center /> 
+<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%96%B0%E5%A2%9E%E6%88%90%E5%93%A1.png" width = "300" height = "500" alt="新增拜訪_選擇成員" align=center /> 
 
 `AG009` app_group/get_users_by_main_group `android` 會call多次api  
 `AG006` app_group/get_users `ios`   
