@@ -17,16 +17,10 @@
 > `AG010` app\_group/get\_users\_by\_enterprise\_group `android`
 >
 > `AG032` app\_group/get\_allgroups\_by\_enterprise `android`
-
-
-
-
-
+>
 > 以下API整併至 AU001
 >
 > `PS001` push/save\_device\_token
-
-
 
 
 
