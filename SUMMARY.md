@@ -9,4 +9,7 @@
   * [填寫驗證碼](tian-xie-yan-zheng-ma.md)
   * [忘記密碼\_送出](wang-ji-mi-ma-song-chu.md)
 * [首頁](shou-ye.md)
+* [報表](bao-biao.md)
+* [任務](ren-wu.md)
+  * [新增任務](ren-wu/xin-zeng-ren-wu.md)
 
