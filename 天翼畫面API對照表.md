@@ -136,8 +136,7 @@
 #  首頁_拜訪
 ###  拜訪列表
 
-
-<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%8B%9C%E8%A8%AA7%BE%A4%E7%B5%84%E5%88%97%E8%A1%A8.png" width = "300" height = "500" alt="拜訪列表" align=center /> 
+<img src="https://github.com/dogC76/wing_document/blob/master/%E5%9C%96/%E6%8B%9C%E8%A8%AA%E5%88%97%E8%A1%A8.png" width = "300" height = "500" alt="拜訪列表" align=center /> 
 
 `SR001` schedule/get_by_days
 
