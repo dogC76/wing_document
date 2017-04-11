@@ -49,14 +49,14 @@
   * [刪除成員](shan-chu-cheng-yuan.md)
   * [新建子群組](xin-jian-zi-qun-zu.md)
   * [點擊子群組](dian-ji-zi-qun-zu.md)
-* 消息
+* [消息](xiao-xi.md)
   * [消息列表](xiao-xi-lie-biao.md)
   * [點擊消息](dian-ji-xiao-xi.md)
 * [日曆](ri-li.md)
   * [日曆列表](ri-li/ri-li-lie-biao.md)
     * [詳細內容](ri-li/ri-li-lie-biao/xiang-xi-nei-rong.md)
   * [新增行程](ri-li/xin-zeng-xing-cheng.md)
-* 聯繫
+* [聯繫](lian-xi.md)
   * [聯絡人列表](lian-luo-ren-lie-biao.md)
   * [搜尋聯絡人](sou-xun-lian-luo-ren.md)
   * [聯絡人排序](lian-luo-ren-pai-xu.md)
@@ -74,7 +74,6 @@
   * [群組考勤](kao-qin/qun-zu-kao-qin.md)
     * [選擇成員](kao-qin/xuan-ze-cheng-yuan.md)
 * [文件](wen-jian.md)
-  * 文件列表
   * [搜尋文件](wen-jian/sou-xun-wen-jian.md)
 * [設定](she-ding.md)
   * [個人QR code](she-ding/ge-ren-qr-code.md)
